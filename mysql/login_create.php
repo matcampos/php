@@ -25,7 +25,7 @@ if(isset($_POST['enviar'])){
     if(!$result){
         die('Moio a inclusão');
     }else{
-        echo "Dados inseridos com sucesso!!";
+        echo "<script>alert('Dados inseridos com sucesso!!')</script>";
     }
 }
 
