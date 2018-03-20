@@ -1,12 +1,6 @@
 <?php
-            $conection = MYSQLI_CONNECT('localhost','root','fiap','loginapp');
-            if(!$conection){
-                echo "Moio" . mysqli_error($conection);
-            }
-
-            $query = "SELECT * from usuario";
-
-            $result = mysqli_query($conection, $query);
+      include "functions.php";
+      include "db.php";
 ?>
 
 <!DOCTYPE html>
@@ -18,14 +12,9 @@
     
     <body>
                 <div class="container">
-                        <div class="col-sm-6"></div>
+                        <div class="col-sm-6">
                             <?php
-                                while($row = mysqli_fetch_assoc($result)){
-                                    echo "<pre>";
-                                print_r($row['username']);
-                                // echo "<br>";
-                                echo "</pre>";
-                                }
+                             show()
                             ?>
                         </div>
     </body>    

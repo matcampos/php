@@ -1,35 +1,7 @@
 <?php
-if(isset($_POST['enviar'])){
-    //estabelecer a Conexão com o MySQL
+include "functions.php";
 
-   $connection =  mysqli_connect('localhost','root','fiap','loginapp');
-    // if($connection){
-    //         echo "eba conectado com sucesso!";
-    // }else{
-    //     die('moio');
-    // }
-    if(!$connection){
-        die('Moio');
-    }
-
-    $name = $_POST['username'];
-    $password = $_POST['password'];
-    // query para inserir os dados de acordo com os nomes das variáveis
-    $query = "INSERT INTO usuario(username, password) VALUES('$name','$password')";
-
-    // função para executar um comando sql
-    $result = mysqli_query($connection,$query);
-
-    //validação
-
-    if(!$result){
-        die('Moio a inclusão');
-    }else{
-        echo "<script>alert('Dados inseridos com sucesso!!')</script>";
-    }
-}
-
-
+create();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

@@ -1,5 +1,6 @@
 <?php include "functions.php";
-    atualizaTabela();
+
+    delete();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -11,31 +12,23 @@
     
     <body>
     <div class="container">
-        <div class="col-sm-6">
-            <form action="login_update.php" method="post">
+        <div class="col-sm-6" style="margin-top:50px;">
+            <form action="login_delete.php" method="post">
+            <h4>Selecione o 
+            <span 
+            style="color:#fff;
+            background:#007bff;
+            border-radius:3px;">id</span> do objeto que deseja deletar</h4>
 
                 <div class="form-group">
-                    <label for="username">Usuário: </label>
-                    <input type="text" name="username" class="form-control"/>
-                </div>
-
-                <div class="form-group">
-                    <label for="password">Senha: </label>
-                    <input type="password" name="password" class="form-control"/>
-                </div>
-
-
-                <div class="form-group">
-                   <select name="id">
+                   <select name="id" class="col-md-3">
                   <!-- <option value="1">1</option> -->
                   <?php 
                         mostraDados();
                     ?>
                    </select>
                 </div>
-
-                <input type="submit" class="btn btn-primary" name="update" value="ENVIAR">
-
+                    <input type="submit" class="btn btn-danger" name="delete" value="deletar">
 
             </form>
         </div>
