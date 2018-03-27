@@ -39,7 +39,7 @@ function exibirDados(){
     $result = mysqli_query($conection, $query);
 
     while($row = mysqli_fetch_assoc($result)){
-        echo "<option>";
+    echo "<option>";
         echo($row['id']);
     // echo "<br>";
      echo "</option>";
@@ -69,5 +69,25 @@ function alterar(){
     
     }
     }
+
+    function deletar(){
+        global $conection;
+
+        if(isset($_POST['deletar'])){
+            $id = $_POST['id'];
+
+
+            $query = "DELETE FROM POKEMON WHERE id = $id";
+
+            $result = mysqli_query($conection,$query);
+
+            if(!$result){
+                die("Falha no delete");
+            }else{
+                echo "Dado deletado com sucesso";
+            }
+        }
+    }
+    
 
     ?>

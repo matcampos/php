@@ -12,6 +12,10 @@ include "db.php";
 
         listaTipoFogo();
     ?>
-   
+       <?php 
+
+include "links.php";
+
+?>
 </body>
 </html>
