@@ -19,7 +19,7 @@ include "phpScript.php";
     margin: auto;
     border: 2px solid #7b797947;
     border-radius: 5px;">
-    <p>Selecione o id do poquemon que deseja alterar</p>
+    <p>Selecione o id do pokemon que deseja alterar</p>
     <form action="alterar.php" method="post">
 
         <div class="form-group">

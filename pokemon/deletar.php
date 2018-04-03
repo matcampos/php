@@ -13,7 +13,7 @@ include "head.php";
 <body>
 
     <div class="col-md-6"  style="margin:auto">
-    <p>Selecione o id do pockemon que deseja deletar</p>
+    <p>Selecione o id do pokemon que deseja deletar</p>
     <form action="deletar.php" method="post">
 
            <select class="form-control" name="id" id="">
