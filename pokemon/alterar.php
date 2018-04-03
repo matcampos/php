@@ -11,9 +11,9 @@ include "head.php";
 include "phpScript.php";
 ?>
 
-<body>
+<body class="banner">
 
-    <div class="col-md-6"       
+    <div class="col-md-6 color"       
     style="
     margin:auto;
     margin: auto;

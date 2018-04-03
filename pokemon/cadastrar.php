@@ -10,9 +10,9 @@ include "head.php";
 include "phpScript.php";
 ?>
 
-<body >
+<body class="banner">
 
-    <div class="col-md-6" style="margin:auto;margin: auto;
+<div class="col-md-6 color" style="margin:auto;margin: auto;
     border: 2px solid #7b797947;
     border-radius: 5px;" >
 

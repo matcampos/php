@@ -7,7 +7,7 @@ function listaTipoFogo(){
         $result = mysqli_query($conection, $query);
 
         while($row = mysqli_fetch_assoc($result)){
-            echo "<pre>";
+            echo "<pre class='col-md-6 color'>";
         print_r($row);
         // echo "<br>";
          echo "</pre>";

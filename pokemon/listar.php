@@ -5,7 +5,7 @@ include "head.php";
 include "db.php";
 ?>
 
-<body>
+<body class="banner">
 
     <?php
         include "funções.php";

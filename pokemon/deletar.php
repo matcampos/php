@@ -10,9 +10,9 @@ deletar();
 include "head.php";
 ?>
 
-<body>
+<body class="banner">
 
-    <div class="col-md-6"  style="margin:auto">
+<div class="col-md-6 color"  style="margin:auto">
     <p>Selecione o id do pokemon que deseja deletar</p>
     <form action="deletar.php" method="post">
 

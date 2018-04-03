@@ -1,5 +1,5 @@
 
-    <div  style="margin:auto" class="col-md-6"><label for="">Links: </label>
+    <div  style="margin:auto" class="col-md-6 filter" ><label for="">Links: </label>
     <div>
     <a   style="margin:auto"href="cadastrar.php" class="btn btn-info">CADASTRAR</a>
     <a  style="margin:auto" href="alterar.php" class="btn btn-info">ALTERAR</a>
