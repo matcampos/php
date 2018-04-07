@@ -1,33 +1,21 @@
 
 <?php
 include "dbEX5.php";
-function listaTipoFogo(){
-        global $conection;
-        $query = "SELECT * from pokemon WHERE type = 'fogo'";
-        $result = mysqli_query($conection, $query);
 
-        while($row = mysqli_fetch_assoc($result)){
-            echo "<pre class='col-md-6 color'>";
-        print_r($row);
-        // echo "<br>";
-         echo "</pre>";
-         }   
-   
-    }
-
-    function criar(){
+function criar(){
         global $conection;
-if(isset($_POST['enviar'])){
+    if(isset($_POST['enviar'])){
         $name = $_POST['name'];
-        $type = $_POST['type'];
-        $hp = $_POST['hp'];
-        $query = "INSERT INTO pokemon (name,type,hp) VALUES('$name','$type',$hp)";
+        $phone = $_POST['phone'];
+        $rg = $_POST['rg'];
+        $email = $_POST['email'];
+        $query = "INSERT INTO cadastro (name,phone,rg,email) VALUES('$name',$phone,'$rg','$email')";
         $result = mysqli_query($conection, $query);
 
         if(!$result){
             die("Falha a atualização");
         }else{
-            echo "Dados atualizados com sucesso";
+            echo "Dados cadastrados com sucesso";
         }
    
     }
@@ -35,7 +23,20 @@ if(isset($_POST['enviar'])){
 
 function exibirDados(){
     global $conection;
-    $query = "SELECT * from pokemon";
+    $query = "SELECT * from cadastro";
+    $result = mysqli_query($conection, $query);
+
+    while($row = mysqli_fetch_assoc($result)){
+    echo "<pre style='margin:auto;' class='col-md-6 color' >";
+        print_r($row);
+    // echo "<br>";
+     echo "</pre>";
+     }   
+}
+
+function exibirDadosAlter(){
+    global $conection;
+    $query = "SELECT * from cadastro";
     $result = mysqli_query($conection, $query);
 
     while($row = mysqli_fetch_assoc($result)){
@@ -54,10 +55,11 @@ function alterar(){
     if(isset($_POST['alterar'])){
         $id = $_POST['id'];
         $name = $_POST['name'];
-        $type = $_POST['type'];
-        $hp = $_POST['hp'];
-        
-        $query = "UPDATE pokemon SET name = '$name',type = '$type',hp = $hp where id = $id";
+        $phone = $_POST['phone'];
+        $rg = $_POST['rg'];
+        $email = $_POST['email'];
+
+        $query = "UPDATE cadastro SET name = '$name',phone = $phone ,rg = '$rg', email = '$email' where id = $id";
 
         $result = mysqli_query($conection, $query);
     
@@ -77,7 +79,7 @@ function alterar(){
             $id = $_POST['id'];
 
 
-            $query = "DELETE FROM POKEMON WHERE id = $id";
+            $query = "DELETE FROM cadastro WHERE id = $id";
 
             $result = mysqli_query($conection,$query);
 

@@ -15,7 +15,7 @@ include "headEX5.php";
     border: 2px solid #7b797947;
     border-radius: 5px;" >
 
-    <form action="cadastrar.php" method="post">
+    <form action="ex5Create.php" method="post">
             <div class="form-group">
             <label for="">Nome</label>
               <input type="text"class="form-control" name="name">
