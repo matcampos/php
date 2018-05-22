@@ -11,8 +11,10 @@ $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 foreach($resultado as $res){
     foreach($res as $key => $value){
-       echo "<strong>" . $key . "</strong> " . $value . "<br>" . "_________________ <br>";
+       echo "<strong>" . $key . "</strong> " . $value . "<br>";
     }
+
+    echo "_________________ <br>";
 }
 
 ?>
